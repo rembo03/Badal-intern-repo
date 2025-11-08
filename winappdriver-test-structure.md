@@ -7,10 +7,32 @@ Why this is important:
 When a test suite becomes large, unstructured tests are hard to manage. A good structure improves readability, reusability, and debugging.
 
 Tasks:
-1. Research best practices for structuring E2E test files.
-2. Organize test cases into reusable helper functions (like login steps, navigation steps).
-3. Implement Page Object Model (POM) to separate test logic from UI interactions.
-4. Refactor an existing test to make it more maintainable.
+1. **Research best practices for structuring E2E test files**
+   - Keep tests modular and small — each test should cover one specific scenario.
+   - Use clear and consistent naming for test files and functions.
+   - Follow a logical folder structure (e.g., pages, helpers, tests).
+   - Keep test data separate from test logic using configuration or JSON files.
+   - Use setup and teardown methods for preparing and cleaning up test environments.
+
+2. **Organize test cases into reusable helper functions (e.g., login steps, navigation steps)**
+   - Move repeated actions like login, logout, or navigation into helper functions.
+   - Store these helpers in a separate folder (e.g., `/helpers`).
+   - Helps reduce duplicate code and makes updates easier.
+   - Example: A single `login_helper()` can be used across multiple test files.
+
+3. **Implement Page Object Model (POM) to separate test logic from UI interactions**
+   - Create one page class per app screen (e.g., `LoginPage`, `DashboardPage`).
+   - Store locators and UI actions inside these page classes.
+   - Tests then just call these page methods instead of using raw locators.
+   - This improves readability and makes it easy to update UI changes in one place.
+
+4. **Refactor an existing test to improve maintainability**
+   - Identify repeated code blocks and move them to helpers or page objects.
+   - Use meaningful method and variable names.
+   - Reduce hard-coded values and use configuration files.
+   - Simplify long test steps by breaking them into smaller, clear functions.
+   - Review for readability and remove unnecessary waits or print statements.
+
 
 Reflection:
 
