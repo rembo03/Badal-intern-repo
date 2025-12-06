@@ -1,40 +1,26 @@
-What caused the conflict?
-The merge conflict happened because I changed the same line in the same file on two different branches:
+1. What caused the conflict?
+I changed the same line in a file on two different branches.
+Git could not decide which version to keep.
+So, a merge conflict happened.
 
-One change was on the conflict-branch
+2. How I created the conflict
+Created a new branch: conflict-branch
+Edited a file and committed it
+Switched to main branch
+Edited the same line differently
+Tried to merge → Git showed a conflict
 
-Another change was on the main branch
+3. How I fixed the conflict
+Opened GitHub Desktop
+It showed both versions of the file
+I chose the correct line to keep
+Removed the conflict markers
+Marked the conflict as resolved
+Committed the final version
 
-Git did not know which version to keep, so it showed a conflict.
-
-How I created the conflict
-I made a new branch called conflict-branch
-
-I edited a file and committed the change
-
-I went back to the main branch and changed the same line in the file
-
-When I tried to merge the two branches, Git showed a conflict
-
-How I fixed the conflict
-I used GitHub Desktop to solve the problem:
-
-GitHub Desktop showed me both versions of the file
-
-I chose which version I wanted to keep
-
-I edited the file to remove the conflict markers
-
-I marked the conflict as resolved
-
-I committed the final version
-
-What I learned
-Merge conflicts happen when two branches change the same part of a file
-
-Git cannot choose the correct version, so we must fix it manually
-
-GitHub Desktop makes resolving conflicts easier
-
-Pulling and committing regularly helps avoid big conflicts
-
+* What I learned
+Merge conflicts happen when two branches edit the same part of a file
+Git cannot automatically choose the correct version
+We must fix the conflict manually
+GitHub Desktop makes it easier to see and solve the conflict
+Pulling and committing often helps avoid conflicts
